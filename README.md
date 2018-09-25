@@ -5,7 +5,8 @@
 
 * Node.js and NPM
 * Java 1.8
-* Docker (for running Selenium with Docker Service)
+* Optional: Docker (for running Selenium with Docker Service)
+* Running AEM instance (default port 4502)
 * Tests are written in ES6
 
 ## Install and usage
