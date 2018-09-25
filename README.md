@@ -6,6 +6,7 @@
 * Node.js and NPM
 * Java 1.8
 * Docker (for running Selenium with Docker Service)
+* Tests are written in ES6
 
 ## Install and Setup
 
@@ -19,8 +20,8 @@
     * Add spec reporter `npm install --save-dev wdio-spec-reporter`
 * `npm install --save-dev babel-register babel-preset-es2015`
     * Configure `.babelrc` and `wdio.conf.js` to be able to use latest ES6 syntax.
-* Create `tests/specs` folder.
-* Create `lib` folder where you will put your PageObjects.
+* Create [`tests/specs`](./tests/spec) folder.
+* Create [`lib`](./lib) folder where you will put your PageObjects.
 
 
 ## Running
