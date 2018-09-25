@@ -29,11 +29,13 @@
 **Starting Selenium manually with `selenium-standalone`.**
 
 * `./node_modules/.bin/selenium-standalone install && ./node_modules/.bin/selenium-standalone start`
-* `./node_modules/.bin/wdio`
-* `./node_modules/.bin/wdio --spec GithubTest.js`
-* `./node_modules/.bin/wdio --spec AEMLoginTest.js`
+    * OR `npm run start-selenium`
+* Run all tests: `./node_modules/.bin/wdio`
+* Run specific test: `./node_modules/.bin/wdio --spec GithubTest.js`
+* Run specific test: `./node_modules/.bin/wdio --spec AEMLoginTest.js`
 
 **Starting Selenium automatically.**
 
 * `npm install wdio-docker-service --save-dev`
+* Add [Docker service](https://github.com/stsvilik/wdio-docker-service) configuration to `wdio.config.js`
 * `./node_modules/.bin/wdio`
