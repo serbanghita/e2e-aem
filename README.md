@@ -8,7 +8,28 @@
 * Docker (for running Selenium with Docker Service)
 * Tests are written in ES6
 
-## Install and Setup
+## Install and usage
+
+* `git clone https://github.com/serbanghita/e2e-aem.git`
+* `cd e2e-aem`
+* `npm install`
+* `npm run test` (uses Docker)
+
+## Selenium
+
+**Starting Selenium manually with `selenium-standalone`.**
+
+* `./node_modules/.bin/selenium-standalone install && ./node_modules/.bin/selenium-standalone start`
+    * OR `npm run start-selenium`
+* Run all tests: `./node_modules/.bin/wdio`
+* Run specific test: `./node_modules/.bin/wdio --spec GithubTest.js`
+* Run specific test: `./node_modules/.bin/wdio --spec AEMLoginTest.js`
+
+**Starting Selenium automatically.**
+
+* `./node_modules/.bin/wdio`
+
+## Create new project from scratch.
 
 * `npm init`
     * Configure your NPM project.
@@ -22,20 +43,8 @@
     * Configure `.babelrc` and `wdio.conf.js` to be able to use latest ES6 syntax.
 * Create [`tests/specs`](./tests/spec) folder.
 * Create [`lib`](./lib) folder where you will put your PageObjects.
+* Optional Docker: `npm install wdio-docker-service --save-dev`
+    * Add [Docker service](https://github.com/stsvilik/wdio-docker-service) configuration to `wdio.config.js`
 
 
-## Running
 
-**Starting Selenium manually with `selenium-standalone`.**
-
-* `./node_modules/.bin/selenium-standalone install && ./node_modules/.bin/selenium-standalone start`
-    * OR `npm run start-selenium`
-* Run all tests: `./node_modules/.bin/wdio`
-* Run specific test: `./node_modules/.bin/wdio --spec GithubTest.js`
-* Run specific test: `./node_modules/.bin/wdio --spec AEMLoginTest.js`
-
-**Starting Selenium automatically.**
-
-* `npm install wdio-docker-service --save-dev`
-* Add [Docker service](https://github.com/stsvilik/wdio-docker-service) configuration to `wdio.config.js`
-* `./node_modules/.bin/wdio`
